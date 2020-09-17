@@ -16,6 +16,20 @@
         color:white;
         }
     </style>
+    <script>
+        var contextRoot = "/" + window.location.pathname.split('/')[1];
+    function myFunction(inputName) {
+        $.ajax({
+            type : "GET",
+      contentType : "application/json",
+      url : contextRoot+"checkName",
+      data : 'inputName='+inputName,
+      dataType : 'html',
+            success: function(data){
+            }
+        });
+    }
+    </script>
 </head>
 <body>
 <div class="container" style="size=100px">
