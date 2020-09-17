@@ -26,6 +26,8 @@
       data : 'inputName='+inputName,
       dataType : 'html',
             success: function(data){
+                var a = JSON.parse(data);
+                alert("First not repeated letter : " + a.firstNotRepLetter + "\r\nOrdered letter : " + a.orderedLetter);
             }
         });
     }
